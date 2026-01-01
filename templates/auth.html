@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/auth.css">
+    <title>Login & Signup</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="forms-container">
+        <div class="signin-signup">
+
+            <!-- ================= LOGIN FORM ================= -->
+            <form id="loginForm" class="sign-in-form" onsubmit="return false;">
+                <h2 class="title">Welcome Back 👋</h2>
+                <p class="subtitle">Access your AI-powered Court Judgment Dashboard</p>
+
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input id="login_username" type="text" placeholder="Username" required />
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input id="login_password" type="password" placeholder="Password" required />
+                </div>
+
+                <button type="button" class="btn solid" onclick="loginUser()">Login</button>
+
+                <p class="extra-text">
+                    Forgot your password?
+                    <a href="#">Recover now</a>
+                </p>
+            </form>
+
+            <!-- ================= SIGNUP FORM ================= -->
+            <form id="signupForm" class="sign-up-form" onsubmit="return false;">
+                <h2 class="title">Create Account ✨</h2>
+                <p class="subtitle">Join the future of AI-driven legal analytics</p>
+
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input id="signup-username" type="text" placeholder="Full Name" required />
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input id="signup-email" type="email" placeholder="Email" required />
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input id="signup-password" type="password" placeholder="Password" required />
+                </div>
+
+                <button type="button" class="btn" onclick="signupUser()">Sign Up</button>
+
+                <p class="extra-text">Already have an account? Switch to login</p>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="panels-container">
+
+        <!-- LEFT PANEL -->
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>New Here?</h3>
+                <p>Create an account and explore AI-powered verdict, IPC, and legal prediction tools.</p>
+                <button class="btn transparent" id="sign-up-btn">Sign up</button>
+            </div>
+            <img src="/static/img/log.svg" class="image" alt="login image">
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>Already a Member?</h3>
+                <p>Login to access your smart legal dashboard powered by Machine Learning.</p>
+                <button class="btn transparent" id="sign-in-btn">Sign in</button>
+            </div>
+            <img src="/static/img/register.svg" class="image" alt="register image">
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/js/auth.js"></script>
+
+</body>
+</html>
